@@ -1,2 +1,2 @@
-# ITMO Automation project
+# demoqa project
 Репозиторий для проекта demoqa на курсе по автоматизированному тестированию в ИТМО
