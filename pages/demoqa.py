@@ -10,5 +10,4 @@ class DemoQa(BasePage):
 
         self.icon = WebElement(driver, '#app > header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
-        self.footer_text = WebElement(driver, '#app > footer > span')
-        self.elements_text = WebElement(driver, '#app > div > div > div > div.col-12.mt-4.col-md-6')
+        self.text_footer = WebElement(driver, '#app > footer > span')
