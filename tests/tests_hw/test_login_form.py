@@ -17,15 +17,49 @@ def test_login_form(browser):
     form_page.hobbies.click_force()
     form_page.current_address.send_keys('text')
 
-    form_page.choose_state.click()
+    # """Домашнее задание: заполнение поля State and City"""
+    # form_page.btn_state.click()
+    # time.sleep(2)
+    # form_page.inp_state.send_keys('NCR')
+    # form_page.inp_state.send_keys(Keys.ENTER)
+    # time.sleep(2)
+    # form_page.btn_city.click()
+    # time.sleep(2)
+    # form_page.inp_city.send_keys('Delhi')
+    # form_page.inp_city.send_keys(Keys.ENTER)
+    # time.sleep(2)
+
+def test_state(browser):
+    form_page = FormPage(browser)
+
+    # form_page.visit()
     time.sleep(2)
-    form_page.input_state.send_keys('NCR')
-    form_page.input_state.send_keys(Keys.ENTER)
+    form_page.btn_state.scroll_to_element()
+    form_page.btn_state.click()
+    form_page.btn_NCR.click()
     time.sleep(2)
-    form_page.choose_city.click()
+
+def test_state_2(browser):
+    form_page = FormPage(browser)
+
+    # form_page.visit()
     time.sleep(2)
-    form_page.input_city.send_keys('Delhi')
-    form_page.input_city.send_keys(Keys.ENTER)
+    form_page.btn_state.scroll_to_element()
+    time.sleep(2)
+    form_page.inp_state.send_keys('NCR')
+    form_page.inp_state.send_keys(Keys.ENTER)
+    time.sleep(2)
+
+def test_state_3(browser):
+    form_page = FormPage(browser)
+
+    # form_page.visit()
+    time.sleep(2)
+    form_page.btn_state.scroll_to_element()
+    time.sleep(2)
+    form_page.btn_state.click()
+    form_page.inp_state.send_keys(Keys.PAGE_DOWN)
+    form_page.inp_state.send_keys(Keys.ENTER)
     time.sleep(2)
 
     form_page.btn_submit.click_force()
@@ -33,3 +67,6 @@ def test_login_form(browser):
 
     assert form_page.modal_dialog.exist()
     form_page.btn_close_modal.click_force()
+
+
+    
