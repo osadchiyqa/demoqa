@@ -33,3 +33,12 @@ class Tables(BasePage):
         self.btn_next = WebElement(driver, '.-next > button:nth-child(1)')
         self.total_pages = WebElement(driver, '.-totalPages')
         self.current_page = WebElement(driver, '.-pageJump > input:nth-child(1)')
+
+
+        self.header_first_name = WebElement(driver, 'div.rt-th:nth-child(1)')
+        self.header_last_name = WebElement(driver, 'div.rt-th:nth-child(2)')
+        self.header_email = WebElement(driver, 'div.rt-th:nth-child(3)')
+        self.header_age = WebElement(driver, 'div.rt-th:nth-child(4)')
+        self.header_salary = WebElement(driver, 'div.rt-th:nth-child(5)')
+        self.header_department = WebElement(driver, 'div.rt-th:nth-child(6)')
+        self.header_action = WebElement(driver, 'div.rt-th:nth-child(7)')
